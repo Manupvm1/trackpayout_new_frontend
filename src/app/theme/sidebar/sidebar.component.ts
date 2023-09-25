@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,6 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
+
+  constructor(private AuthService:AuthService,private router: Router){
+
+  }
+
     openSidebar: boolean = true;
 
       menuSidebar=[
@@ -308,5 +315,21 @@ export class SidebarComponent {
         itemEl.classList.toggle("showMenu");
       }
 
-  
+
+  logout() {
+
+    this.AuthService.logout().subscribe(result => {
+      if (result['status'] == 200) {
+        this.router.navigate(['/auth/login']);
+        window.localStorage.clear();
+      }
+    })
+
+    // if (confirm("Are you sure you want to logout?")) {
+    //   window.localStorage.clear();
+    //   this.router.navigate(['/auth/signin']);
+    // }
+
+  }
+
 }

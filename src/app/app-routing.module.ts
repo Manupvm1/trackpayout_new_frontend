@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingComponent } from './features/landing/landing.component';
-
+import { AuthGuardService } from '../app/auth/auth-guard.service';
 
 const routes: Routes = [
 
@@ -20,6 +20,7 @@ const routes: Routes = [
   
   {
     path:'features',
+    canActivate: [AuthGuardService],
     component:LandingComponent,
     loadChildren: () => import('./features/features.module').then((module) => module.FeaturesModule)
   },
