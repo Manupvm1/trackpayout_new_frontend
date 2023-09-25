@@ -61,11 +61,11 @@ const routes: Routes = [
   //   loadChildren: () => import('./ledgerstatement/ledgerstatement.module').then((module) => module.LedgerstatementModule)
   // },
 
-  // {
-  //   path:'features',
-  //   component:LandingComponent,
-  //   loadChildren: () => import('./features/features.module').then((module) => module.FeaturesModule)
-  // },
+  {
+    path:'',
+    redirectTo:'profile',
+    pathMatch:'full'
+  },
 
   {
     path:'auth',

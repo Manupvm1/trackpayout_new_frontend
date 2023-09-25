@@ -1,13 +1,14 @@
 import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.scss']
 })
-export class HeaderComponent {
+export class ProfileComponent {
 
   @ViewChild('myModal') modal: any;
+ 
 
   constructor(private renderer: Renderer2, private el: ElementRef) {}
 
@@ -30,5 +31,6 @@ export class HeaderComponent {
 
     }
   }
+
 
 }

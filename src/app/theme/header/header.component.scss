@@ -112,3 +112,61 @@ width: 95%;
     margin: 0;
     text-align: center;
   }
+
+.icon-drop{
+  list-style: none;
+  display: flex;
+  /* margin-right: 25px; */
+  position: relative;
+  right: 17px;
+  margin-bottom: 0;
+}  
+
+.icon-drop li{
+  margin-top: 15px;
+}
+
+
+.btnclose {
+  padding: 0px 10px;
+}
+
+.checkbtn{
+  margin-left: 13px;
+  margin-bottom: 10px;
+}
+
+input {
+  font-size: var(--font-size);
+}
+select {
+  font-size: var(--font-size);
+}
+
+.headings {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  font-size: var(--font-size);
+}
+
+.btns {
+  display: flex;
+}
+
+.modal-title {
+  font-size: 14px;
+}
+
+.divide {
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+}
+
+.profile-footer{
+  text-align: center;
+  margin-top: 20px;
+}

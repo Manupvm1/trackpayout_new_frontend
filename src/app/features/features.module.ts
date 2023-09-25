@@ -15,6 +15,7 @@ import { TaskComponent } from './task/task.component';
 import { BillDiscountComponent } from './bill-discount/bill-discount.component';
 import { ClientComponent } from './client/client.component';
 import { FollowupComponent } from './followup/followup.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -34,6 +35,7 @@ import { FollowupComponent } from './followup/followup.component';
     BillDiscountComponent,
     ClientComponent,
     FollowupComponent,
+    ProfileComponent,
     
   ],
   imports: [

@@ -1,0 +1,244 @@
+<div class="container">
+    <div class="main-body">
+    
+          <!-- Breadcrumb -->
+          <nav aria-label="breadcrumb" class="main-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="javascript:void(0)">User</a></li>
+              <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+            </ol>
+          </nav>
+          <!-- /Breadcrumb -->
+    
+          <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body profile-head">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                    <div class="mt-3">
+                      <h4>Bishir D</h4>
+                      <p class="text-secondary mb-1">bishir@contisoftechno.co</p>
+                     
+                        <!-- <button class="primary-drop" type="button" aria-expanded="false" (click)="openModel()" data-bs-toggle="modal" data-bs-target="#myModal"> -->
+                            <i class="fa-solid fa-lock space" style="color: var(--primary-color);" (click)="openModel()" data-bs-toggle="modal" data-bs-target="#myModal"></i>&nbsp; 
+                        <!-- </button> -->
+                      <i class="fa-solid fa-arrow-right-from-bracket" style="color: var(--primary-color);" (click)="openModel()" data-bs-toggle="modal" data-bs-target="#myModal1"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="col-md-8">
+              <div class="card mb-3">
+                <div class="card-body">
+                    <div class="card-head">
+                        <h3 class="card-head title">User Profile Information<i
+                                class="fa-solid fa-rotate-right"></i>
+                        </h3>
+                    </div>
+                    <br>
+                    
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Company ID:</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        10201
+                    </div>
+                  </div>
+                 
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Company Name:</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        ASM_Company
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">First Name:</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      Bishir
+                    </div>
+                  </div>
+                 
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Last Name:</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      D
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        bishir@contisofttechno.com
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Phone No:</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        9991239111
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Designation:</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        Director
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+
+             
+
+              <div class="card mb-3">
+                <div class="card-body">
+                    <div class="card-head">
+                        <h3 class="card-head title">Company Subscription Information<i
+                                class="fa-solid fa-rotate-right"></i>
+                        </h3>
+                    </div>
+                    <br>
+                   
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <h6 class="mb-0">Subscription Start:</h6>
+                    </div>
+                    <div class="col-sm-8 text-secondary">
+                        30-12-2021
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <h6 class="mb-0">Subscription End:</h6>
+                    </div>
+                    <div class="col-sm-8 text-secondary">
+                        31-03-2024
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <h6 class="mb-0">Remaining Days:</h6>
+                    </div>
+                    <div class="col-sm-8 text-secondary">
+                        188
+                    </div>
+                  </div>
+                  <hr>
+                 <div class="profile-footer">
+                    <p>
+                        <i class="fa-solid fa-copyright" style="color: var(--primary-color);"></i> Copyright 2023 | 
+                        <i class="fa-solid fa-registered" style="color: var(--primary-color);"></i> All Rights Reserved 
+                        <br>
+                        <span>By <strong>Contisoft Technologies LLP</strong></span>
+                    </p>
+                 </div>
+                  
+                 
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+    </div>
+
+
+    
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg" style="width: 1150;">
+        <div class="modal-content">
+            <div class="modal-head headings">
+                        <h3 class="modal-title">Change Password</h3>
+                        <button type="button" class="close btnclose" (click)="closeModel()" data-bs-dismiss="modal">&times;</button> 
+                        <!-- <span class="field">'*' mark Fields are Mandatory</span> -->
+            </div>
+                    <div class="modal-body">
+                        <form>
+                    
+                            <div class="row">
+                                
+                                <div class="col-md-6 mb-2">
+                                    <label for="Confirm Password">New Password</label>
+                                    <input type="password" class="form-control" placeholder="New Password" required>
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <label for="Confirm Password">Confirm Password</label>
+                                    <input type="password" class="form-control" placeholder="Confirm Password" required>
+                                </div>
+                               
+                                
+                                
+                             
+                                <!-- <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label" for="invalidCheck">
+                                  Create new company with these details 
+                                </label>       -->
+                    </div>
+
+                  
+                
+
+                   
+                            
+                            <!-- <button class="btn btn-primary disabled" type="submit">Save</button> -->
+                           
+            </form>
+        </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" (click)="closeModel()" data-bs-dismiss="modal">Change Password</button>
+                        
+                    </div>
+                   
+                  
+                  </div>
+              
+                </div>
+</div>
+
+
+<div id="myModal1" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg" style="width: 1150;">
+        <div class="modal-content">
+            <div class="modal-head headings">
+                        <h3 class="modal-title">Log Out</h3>
+                        <button type="button" class="close btnclose" (click)="closeModel()" data-bs-dismiss="modal">&times;</button> 
+                        <!-- <span class="field">'*' mark Fields are Mandatory</span> -->
+            </div>
+                    <div class="modal-body">
+                        <div class="profile-footer">
+                            <img src="../../../assets/logout.jpg" alt="" width="150px" height="150px">
+                            <p>Do you really want to Log Out ?</p>
+                        </div>
+        </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" (click)="closeModel()" data-bs-dismiss="modal">No</button>
+                        <button type="button" class="btn btn-primary" (click)="closeModel()" data-bs-dismiss="modal">Yes</button>
+                        
+                    </div>
+                   
+                  
+                  </div>
+              
+                </div>
+</div>

@@ -46,9 +46,16 @@
       <li><a class="dropdown-item" href="#">2021-22</a></li>
       <li><a class="dropdown-item" href="#">2020-21</a></li>
       <li><a class="dropdown-item" href="#">2019-20</a></li>
+     
 
 
+    </ul>
+    
+  </div>
 
+  <div>
+    <ul class="icon-drop">
+      <li><i class="fa-solid fa-arrow-right-from-bracket" style="color: var(--primary-color);"  (click)="openModel()" data-bs-toggle="modal" data-bs-target="#myModal1"></i></li>
     </ul>
   </div>
 </div>
@@ -60,5 +67,29 @@
 
   
     
-
+<div id="myModal1" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg" style="width: 1150;">
+      <div class="modal-content">
+          <div class="modal-head headings">
+                      <h3 class="modal-title">Log Out</h3>
+                      <button type="button" class="close btnclose" (click)="closeModel()" data-bs-dismiss="modal">&times;</button> 
+                      <!-- <span class="field">'*' mark Fields are Mandatory</span> -->
+          </div>
+                  <div class="modal-body">
+                      <div class="profile-footer">
+                          <img src="../../../assets/logout.jpg" alt="" width="150px" height="150px">
+                          <p>Do you really want to Log Out ?</p>
+                      </div>
+      </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" (click)="closeModel()" data-bs-dismiss="modal">No</button>
+                      <button type="button" class="btn btn-primary" (click)="closeModel()" data-bs-dismiss="modal">Yes</button>
+                      
+                  </div>
+                 
+                
+                </div>
+            
+              </div>
+</div>
  

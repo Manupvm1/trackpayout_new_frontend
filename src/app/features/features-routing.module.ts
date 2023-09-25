@@ -12,6 +12,7 @@ import { BillDiscountComponent } from './bill-discount/bill-discount.component';
 import { ClientComponent } from './client/client.component';
 import { FollowupComponent } from './followup/followup.component';
 import { LandingComponent } from './landing/landing.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -75,7 +76,7 @@ const routes: Routes = [
     loadChildren: () => import('./crm/crm.module').then(module => module.CrmModule)
   },
   
-
+  
 
  
   // {
@@ -115,6 +116,10 @@ const routes: Routes = [
     path:'followup',
     component: FollowupComponent
   },
+  {
+    path: 'profile',
+    component: ProfileComponent
+  }
 
 
 

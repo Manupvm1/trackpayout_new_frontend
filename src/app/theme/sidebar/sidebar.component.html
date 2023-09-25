@@ -50,7 +50,7 @@
     
 
 
-    <div class="profile">
+    <!-- <div class="profile">
       <div class="icon">
         <span>B</span>
       </div>
@@ -61,8 +61,21 @@
       </div>
       <div><button (click)="logout()">logout</button></div>
 
-    </div>
+    </div> -->
+    <a [routerLink]="['/features/profile']">
+      <div class="profile">
+        <div class="icon">
+          <span>B</span>
+        </div>
+        <div class="info">
+          <h3>Bishir Enterprises</h3>
+          <p>Company ID: 10031</p>
+          <i class="fa-solid fa-angle-right"></i>     
+        </div>
+      </div>
+    </a>
   </div>
+
 
 
  
