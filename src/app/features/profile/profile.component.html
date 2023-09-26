@@ -18,8 +18,8 @@
                   <div class="d-flex flex-column align-items-center text-center">
                     <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
-                      <h4>Bishir D</h4>
-                      <p class="text-secondary mb-1">bishir@contisoftechno.co</p>
+                      <h4>{{userdata.first_name}}  {{userdata.last_name}}</h4>
+                      <p class="text-secondary mb-1">{{CompanyDetails.company_email}}</p>
                      
                         <!-- <button class="primary-drop" type="button" aria-expanded="false" (click)="openModel()" data-bs-toggle="modal" data-bs-target="#myModal"> -->
                             <i class="fa-solid fa-lock space" style="color: var(--primary-color);" (click)="openModel()" data-bs-toggle="modal" data-bs-target="#myModal"></i>&nbsp; 
@@ -46,7 +46,7 @@
                       <h6 class="mb-0">Company ID:</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        10201
+                        {{CompanyDetails.company_id}}
                     </div>
                   </div>
                  
@@ -55,7 +55,7 @@
                       <h6 class="mb-0">Company Name:</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        ASM_Company
+                     {{ CompanyDetails.company_name}}
                     </div>
                   </div>
                   
@@ -64,7 +64,7 @@
                       <h6 class="mb-0">First Name:</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      Bishir
+                      {{userdata.first_name}}
                     </div>
                   </div>
                  
@@ -73,7 +73,7 @@
                       <h6 class="mb-0">Last Name:</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      D
+                      {{userdata.last_name}}
                     </div>
                   </div>
                   
@@ -82,7 +82,7 @@
                       <h6 class="mb-0">Email</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        bishir@contisofttechno.com
+                        {{userdata.email}}
                     </div>
                   </div>
                   <div class="row">
@@ -90,7 +90,7 @@
                       <h6 class="mb-0">Phone No:</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        9991239111
+                      {{userdata.contact}}
                     </div>
                   </div>
                   <div class="row">
@@ -98,7 +98,7 @@
                       <h6 class="mb-0">Designation:</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        Director
+                      {{userdata.designation}}
                     </div>
                   </div>
                  
@@ -121,7 +121,7 @@
                       <h6 class="mb-0">Subscription Start:</h6>
                     </div>
                     <div class="col-sm-8 text-secondary">
-                        30-12-2021
+                      {{userdata.subscription_detail.subscription_start  | date:'dd-MM-yyyy'}}
                     </div>
                   </div>
                   
@@ -130,7 +130,7 @@
                       <h6 class="mb-0">Subscription End:</h6>
                     </div>
                     <div class="col-sm-8 text-secondary">
-                        31-03-2024
+                      {{userdata.subscription_detail.subscription_end  | date:'dd-MM-yyyy'}}
                     </div>
                   </div>
                   
@@ -139,7 +139,7 @@
                       <h6 class="mb-0">Remaining Days:</h6>
                     </div>
                     <div class="col-sm-8 text-secondary">
-                        188
+                        {{subscriptionremaining}}
                     </div>
                   </div>
                   <hr>
@@ -233,7 +233,7 @@
         </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" (click)="closeModel()" data-bs-dismiss="modal">No</button>
-                        <button type="button" class="btn btn-primary" (click)="closeModel()" data-bs-dismiss="modal">Yes</button>
+                        <button type="button" class="btn btn-primary" (click)="logout()" data-bs-dismiss="modal">Yes</button>
                         
                     </div>
                    

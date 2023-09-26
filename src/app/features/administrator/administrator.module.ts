@@ -7,7 +7,7 @@ import { OnboardMastersComponent } from './onboard-masters/onboard-masters.compo
 import { BankDetailsComponent } from './bank-details/bank-details.component';
 import { CompanyComponent } from './company/company.component';
 import { GeneralConfigComponent } from './general-config/general-config.component';
-
+import { ReactiveFormsModule } from '@angular/forms'; 
 
 
 @NgModule({
@@ -21,7 +21,7 @@ import { GeneralConfigComponent } from './general-config/general-config.componen
   ],
   imports: [
     CommonModule,
-    AdministratorRoutingModule
+    AdministratorRoutingModule,ReactiveFormsModule
   ]
 })
 export class AdministratorModule { }

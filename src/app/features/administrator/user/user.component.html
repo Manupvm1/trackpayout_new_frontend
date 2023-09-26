@@ -96,28 +96,69 @@
                     <button type="button" class="close btnclose" (click)="closeModel()" data-bs-dismiss="modal">&times;</button> 
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form  [formGroup]="UserFormGroup" (ngSubmit)="createUser()">
                 
                         <div class="row">
                             <div class="col-md-6 mb-2">
-                                <label for="First Name">First Name</label>
-                                <input type="text" class="form-control" placeholder="First Name" required>
+                                <label for="First Name">First Name <small> <span class="mandatory" style="color: red;font-weight: 900;">*</span></small></label>
+                                <input type="text" class="form-control" placeholder="First Name" formControlName="first_name"  
+                                [ngClass]="{ 'is-invalid': getFormControls['first_name'].errors && (getFormControls['first_name'].dirty || getFormControls['first_name'].touched) }"
+                                required>
+                                <div *ngIf="getFormControls['first_name'].errors && (getFormControls['first_name'].dirty || getFormControls['first_name'].touched)"
+                        class="invalid-feedback">
+                        <div *ngIf="getFormControls['first_name'].errors" class="error">
+                            First Name is required and must be a valid name
+                        </div>
+                    </div>
                             </div>
                             <div class="col-md-6 mb-2">
-                                <label for="last Name">last Name</label>
-                                <input type="text" class="form-control" placeholder="Last Name" required>
+                                <label for="last Name">last Name <small> <span class="mandatory" style="color: red;font-weight: 900;">*</span></small></label>
+                                <input type="text" class="form-control" placeholder="Last Name" formControlName="last_name"
+                                 [ngClass]="{ 'is-invalid': getFormControls['last_name'].errors && (getFormControls['last_name'].dirty || getFormControls['last_name'].touched) }"
+                                required>
+                                <div *ngIf="getFormControls['last_name'].errors && (getFormControls['last_name'].dirty || getFormControls['last_name'].touched)"
+                                class="invalid-feedback">
+                                <div *ngIf="getFormControls['last_name'].errors" class="error">
+                                    Last Name is required and must be a valid name
+                                </div>
+                            </div>
                             </div>
                             <div class="col-md-6 mb-2">
-                                <label for="Designation">Designation</label>
-                                <input type="text" class="form-control" placeholder="Designation" required>
+                                <label for="Designation">Designation <small> <span class="mandatory" style="color: red;font-weight: 900;">*</span></small></label>
+                                <input type="text" class="form-control" placeholder="Designation"  formControlName="designation"  
+                                [ngClass]="{ 'is-invalid': getFormControls['designation'].errors && (getFormControls['designation'].dirty || getFormControls['designation'].touched) }"
+                                required>
+                                <div *ngIf="getFormControls['designation'].errors && (getFormControls['designation'].dirty || getFormControls['designation'].touched)"
+                                class="invalid-feedback">
+                                <div *ngIf="getFormControls['designation'].errors" class="error">
+                                    Designation is required and must be a valid designation
+                                </div>
+                            </div>
                             </div>
                             <div class="col-md-6 mb-2">
-                                <label for="Company Email">Email</label>
-                                <input type="text" class="form-control" placeholder="Email" required>
+                                <label for="Company Email">Email  <small> <span class="mandatory" style="color: red;font-weight: 900;">*</span></small></label>
+                                <input type="text" class="form-control" placeholder="Email" formControlName="email"  
+                                [ngClass]="{ 'is-invalid': getFormControls['email'].errors && (getFormControls['email'].dirty || getFormControls['email'].touched) }"
+                                required>
+                                <div *ngIf="getFormControls['email'].errors && (getFormControls['email'].dirty || getFormControls['email'].touched)"
+                                class="invalid-feedback">
+                                <div *ngIf="getFormControls['email'].errors" class="error">
+                                    Email is required and must be a valid email
+                                </div>
+                            </div>
                             </div>
                             <div class="col-md-6 mb-2">
-                                <label for="Company Contact">Contact</label>
-                                <input type="text" class="form-control" placeholder="Contact" required>
+                                <label for="Company Contact">Contact   <small> <span class="mandatory" style="color: red;font-weight: 900;">*</span></small></label>
+                                <input type="text" class="form-control" placeholder="Contact" formControlName="contact"  
+                                  [ngClass]="{ 'is-invalid': getFormControls['contact'].errors && (getFormControls['contact'].dirty || getFormControls['contact'].touched) }"
+                                required>
+
+                                <div *ngIf="getFormControls['contact'].errors && (getFormControls['contact'].dirty || getFormControls['contact'].touched)"
+                        class="invalid-feedback">
+                        <div *ngIf="getFormControls['contact'].errors" class="error">
+                            Contact is required and must be a valid contact
+                        </div>
+                    </div>
                             </div>
                             
                             <div class="txtspace">
@@ -129,7 +170,7 @@
                             </div>
                             <div class="row">
 
-                                <div class="form-check col-md-6">
+                                <!-- <div class="form-check col-md-6">
                                     <input class="form-check-input checkspace" type="checkbox" value="" id="invalidCheck" required>
                                     <label class="form-check-label" for="invalidCheck">
                                         Super Admin
@@ -140,9 +181,9 @@
                                     <div class="invalid-feedback">
                                       You must agree before submitting.
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="form-check  col-md-6">
-                                    <input class="form-check-input checkspace" type="checkbox" value="" id="invalidCheck" required>
+                                    <input class="form-check-input checkspace" type="checkbox" value="" id="adminPermission"  [checked]="isAdmin" #adminCheck (click)="adminCheckHandler()" required>
                                     <label class="form-check-label" for="invalidCheck">
                                         Admin
                                     </label>
@@ -154,7 +195,7 @@
                                     </div>
                                 </div>
                                 <div class="form-check col-md-6">
-                                    <input class="form-check-input checkspace" type="checkbox" value="" id="invalidCheck" required>
+                                    <input class="form-check-input checkspace" type="checkbox" value="" id="CRMPermission" [checked]="isCRM" #CRMcheck [disabled]="isAdmin" required>
                                     <label class="form-check-label" for="invalidCheck">
                                         CRM
                                     </label>
@@ -166,7 +207,7 @@
                                     </div>
                                 </div>
                                 <div class="form-check col-md-6">
-                                    <input class="form-check-input checkspace" type="checkbox" value="" id="invalidCheck" required>
+                                    <input class="form-check-input checkspace" type="checkbox" value="" id="UserPermission"  [checked]="isuser" #usercheck  [disabled]="isAdmin" required>
                                     <label class="form-check-label" for="invalidCheck">
                                        User
                                     </label>
@@ -187,7 +228,7 @@
     </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-primary" (click)="closeModel()" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btnspace btn-primary disabled" (click)="closeModel()" data-bs-dismiss="modal">Submit</button>
+                  <button type="button" class="btn btnspace btn-primary"  [disabled]="!UserFormGroup.valid" (click)="createUser()" data-bs-dismiss="modal">Submit</button>
                 </div>
                
               
