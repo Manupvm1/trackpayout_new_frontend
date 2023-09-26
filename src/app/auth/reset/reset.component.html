@@ -1,9 +1,9 @@
 
 
-<div class="wrapper">
+<div class="wrapper" id="resetpassword">
   <div class="container main">
       <div class="row">
-          <div class="col-md-6 side-image">
+          <div class="col-md-6 side-image" id="resetimage">
                      
               <!-------------      image     ------------->
               
@@ -14,25 +14,25 @@
               </div>
               
           </div>
-          <div class="col-md-6 right">
+          <div class="col-md-6 right" id="resetdiv">
               
-              <div class="input-box">
+              <div class="input-box" id="resetform">
                  
-                 <header>Reset Password</header>
-                 <h3>Please Enter E-mail Address and Password to get login in our Application.</h3>
-                 <div class="input-field">
+                 <header id="resethead">Reset Password</header>
+                 <h3 id="resetsubheading">Please Enter E-mail Address and Password to get login in our Application.</h3>
+                 <div class="input-field" id="resetid">
                       <input type="text" class="input" id="email" required="" autocomplete="off">
                       <label for="id">Company id</label> 
                   </div> 
-                 <div class="input-field">
+                 <div class="input-field" id="resetpass">
                       <input type="password" class="input" id="pass" required="">
                       <label for="email">Email Address</label>
                   </div> 
-                 <div class="input-field">
+                 <div class="input-field" id="resetsubmitbtn">
                       
                       <input type="submit" class="submit" value="Sign In">
                  </div> 
-                 <div class="signin">
+                 <div class="signin" id="loginlink">
                   <span>Remember Password? <a [routerLink]="['/auth/login']">Sign in</a></span>
                  </div>
               </div>  

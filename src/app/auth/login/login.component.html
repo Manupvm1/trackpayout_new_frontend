@@ -1,9 +1,9 @@
 
 
-<div class="wrapper">
+<div class="wrapper" id="loginform">
   <div class="container main">
       <div class="row">
-          <div class="col-md-6 side-image">
+          <div class="col-md-6 side-image" id="title">
                      
               <!-------------      image     ------------->
               
@@ -14,25 +14,25 @@
               </div>
               
           </div>
-          <div class="col-md-6 right">
+          <div class="col-md-6 right" id="logindiv">
               
-              <div class="input-box">
+              <div class="input-box" id="loginformpage">
                  
                  <header>Hello, Welcome back..!</header>
                  <h3>Please Enter E-mail Address and Password to get login in our Application.</h3>
-                 <div class="input-field">
+                 <div class="input-field" id="emailid">
                       <input type="text" class="input" id="email" required="" autocomplete="off">
                       <label for="email">Email</label> 
                   </div> 
-                 <div class="input-field">
+                 <div class="input-field" id="password">
                       <input type="password" class="input" id="pass" required="">
-                      <label for="pass">Password</label>
+                      <label for="password">Password</label>
                   </div> 
-                 <div class="input-field">
+                 <div class="input-field" id="submitbtn">
                       
                       <input type="submit" class="submit" value="Sign In">
                  </div> 
-                 <div class="signin">
+                 <div class="signin" id="resetlink">
                   <span>Forgot Password? <a [routerLink]="['/auth/reset']">Reset</a></span>
                  </div>
               </div>  

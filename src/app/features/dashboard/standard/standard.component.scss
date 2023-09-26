@@ -214,7 +214,7 @@
         position: relative;
         display: inline-block;
         border-bottom: 1px dotted black;
-        /* If you want dots under the hoverable text */
+       
       }
       
       .tooltip:hover .tooltiptext {
@@ -230,8 +230,6 @@
         text-align: center;
         padding: 5px 0;
         border-radius: 6px;
-      
-        /* Position the tooltip text - see examples below! */
         position: absolute;
         z-index: 1;
       }
@@ -242,8 +240,6 @@
         flex-shrink: 0;
         width: 100%;
         max-width: 100%;
-        /* padding-right: calc(var(--bs-gutter-x) * .5); */
-        /* padding-left: calc(var(--bs-gutter-x) * .5); */
         margin-top: var(--bs-gutter-y);
       }
     
@@ -283,7 +279,6 @@
     margin-top: 0px
 }
 
-// calender 
 
 .calender-head { 
     display: flex;
@@ -321,10 +316,6 @@
     background-color: var(--primary-color);
     color: #fff;
     border: 1px solid transparent;
-    // border-radius: 15px;
-    // border-bottom-left-radius: 0px;
-    // border-top-left-radius: 0px;
-
 }
 .data-light{
     background-color: var(--primary-color);
