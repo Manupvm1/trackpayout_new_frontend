@@ -20,13 +20,26 @@
                  
                  <header>Hello, Welcome back..!</header>
                  <h3>Please Enter E-mail Address and Password to get login in our Application.</h3>
+                 <form [formGroup]="signinFormGroup" (ngSubmit)="signIn()">
                  <div class="input-field" id="emailid">
-                      <input type="text" class="input" id="email" required="" autocomplete="off">
+                      <input type="text" class="input" id="email" required="" autocomplete="off" formControlName="email"  
+                      [ngClass]="{ 'is-invalid': submitted && getFormControls['email'].errors }" required>
                       <label for="email">Email</label> 
+                      <div *ngIf="submitted && getFormControls['email'].errors" class="invalid-feedback">
+                        <div *ngIf="getFormControls['email'].errors" class="error">
+                            Email id is required and must be a valid email
+                        </div>
+                    </div>
                   </div> 
                  <div class="input-field" id="password">
-                      <input type="password" class="input" id="pass" required="">
+                      <input type="password" class="input" id="pass"   formControlName="password"
+                      [ngClass]="{ 'is-invalid': submitted && getFormControls['password'].errors }" required>
                       <label for="password">Password</label>
+                      <div *ngIf="submitted && getFormControls['password'].errors" class="invalid-feedback">
+                        <div *ngIf="getFormControls['password'].errors" class="error">
+                            Password is required
+                        </div>
+                    </div>
                   </div> 
                  <div class="input-field" id="submitbtn">
                       
@@ -35,6 +48,7 @@
                  <div class="signin" id="resetlink">
                   <span>Forgot Password? <a [routerLink]="['/auth/reset']">Reset</a></span>
                  </div>
+                </form> 
               </div>  
           </div>
       </div>
